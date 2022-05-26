@@ -26,7 +26,7 @@ export const Container = styled.section`
   h2{
     display: inline-block;
     margin-bottom: 2rem;
-    border-bottom: 0.2rem solid var(--blue);
+    border-bottom: 0.2rem solid var(--green);
   }
 
   h3{
@@ -47,7 +47,7 @@ export const Container = styled.section`
    img{
      margin-top: 2rem;
      width: 100%;
-     filter: grayscale(1);
+     filter: grayscale(0.5);
      transition: filter 0.5s;
      &:hover{
        filter: grayscale(0);

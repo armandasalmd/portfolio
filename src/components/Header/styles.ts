@@ -30,11 +30,11 @@ export const Container = styled.header`
       transition: filter 0.25s;
 
       &.button{
-        padding: 0.6rem 5rem;
+        padding: 0.6rem 3rem;
       }
 
       &:hover{
-        filter: brightness(0.6);
+        filter: brightness(0.85);
       }
     }
 
@@ -165,7 +165,7 @@ export const Container = styled.header`
       position: fixed;
       width: 100vw;
       height: 100vh;
-      background: var(--blue);
+      background: var(--green);
       top: 0;
       left: 0;
       transition: opacity 0.25s;

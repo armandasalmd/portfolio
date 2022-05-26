@@ -23,7 +23,7 @@ export const Container = styled.section`
     gap: 2rem;
     place-items: center;
     margin-top: 8rem;
-    div{
+    &__button{
       display: flex;
       align-items: center;
       justify-content: center;
@@ -37,8 +37,8 @@ export const Container = styled.section`
       img{
         width: 4rem;
       }
-      a{
-        color: var(--black);
+      .contacts__text{
+        color: var(--white);
         font-weight: 500;
       }
       &:hover{

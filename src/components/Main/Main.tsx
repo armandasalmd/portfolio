@@ -15,7 +15,6 @@ import reactIcon from "../../assets/react-icon.svg";
 import sassIcon from "../../assets/sass-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
 import vscodeIcon from "../../assets/vscode-icon.svg";
-import vueIcon from "../../assets/vue-icon.svg";
 
 
 export function Main(){
@@ -198,11 +197,6 @@ export function Main(){
               },
               {
                 "src": vscodeIcon,
-                "width": 20,
-                "height": 20
-              },
-              {
-                "src": vueIcon,
                 "width": 20,
                 "height": 20
               },

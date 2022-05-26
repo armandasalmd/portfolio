@@ -7,8 +7,9 @@ export const GlobalStyle = createGlobalStyle`
   :root{
     --pink: #E31F71;
     --black: #212121;
-    --green: #23ce6b;
-    --blue: #016fb9;
+    --white: #fff;
+    --green: #2ca4d8;
+    --blue: #01b975;
     scroll-padding-top: 10rem;
 
     &.light{
@@ -29,6 +30,9 @@ export const GlobalStyle = createGlobalStyle`
         a{
           transition: 0.5s;
           color: black;
+        }
+        a[download] {
+          color: white;
         }
         .menu,.menu:before, .menu:after{
           background-color: var(--black); 

@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 
-import Curriculo from '../../assets/CV_JoaoTulio.pdf'
+import Curriculo from '../../assets/cv-new-armandas.pdf'
 export function Header() {
   const [isActive, setActive] = useState(false)
 
@@ -20,8 +20,8 @@ export function Header() {
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-          <span>J</span>
-          <span>Tulio</span>
+          <span>B</span>
+          <span>Armandas</span>
         </HashLink>
 
         <input
@@ -37,24 +37,23 @@ export function Header() {
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
           </NavHashLink>
-          <NavHashLink smooth to="#sobre" onClick={closeMenu}>
-            Sobre mim
+          <NavHashLink smooth to="#about" onClick={closeMenu}>
+            About me
           </NavHashLink>
           <NavHashLink smooth to="#portfolio" onClick={closeMenu}>
-            Portfólio
+            Portfolio
           </NavHashLink>
-          <NavHashLink smooth to="#contato" onClick={closeMenu}>
-            Contato
+          <NavHashLink smooth to="#contact" onClick={closeMenu}>
+            Contact
           </NavHashLink>
           <a href={Curriculo} download className="button">
-            CV
+            Download CV
           </a>
         </nav>
 
         <div
           aria-expanded={isActive ? 'true' : 'false'}
           aria-haspopup="true"
-          aria-label={isActive ? 'Fechar menu' : 'Abrir menu'}
           className={isActive ? 'menu active' : 'menu'}
           onClick={() => {
             setActive(!isActive)

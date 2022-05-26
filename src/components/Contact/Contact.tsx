@@ -7,20 +7,20 @@ import { Form } from "../Form/Form";
 export function Contact(){
 
   return(
-    <Container id="contato">
+    <Container id="contact">
       <header>
-        <h2>Entre em contato comigo</h2>
-        <p>Se você viu o meu potencial ou quer conversar comigo, não exite em me mandar uma mensagem.</p>
+        <h2>Contact me</h2>
+        <p>If you've seen my potential or want to talk to me, don't hesitate to send me a message.</p>
       </header>
       <div className="contacts">
-        <div>
+        <a className="contacts__button" href="mailto:armandas.bark@gmail.com">
           <img src={emailIcon} alt="Email" />
-          <a href="mailto:joaotuliosoares@hotmail.com">joaotuliosoares@hotmail.com</a>
-        </div>
-        <div>
+          <div className="contacts__text">armandas.bark@gmail.com</div>
+        </a>
+        <a  className="contacts__button" href="tel:+447914603504">
           <img src={phoneIcon} alt="Email" />
-          <a href="tel:+5531981213843">(31) 98121-3843</a>
-        </div>  
+          <div className="contacts__text" >+44 7914 603 504</div>
+        </a>  
       </div>
       <Form></Form>
     </Container>

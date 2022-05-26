@@ -10,19 +10,19 @@ export function Footer() {
   return (
     <Container className="footer">
       <a href="/" className="logo">
-        <span>J</span>
-        <span>Tulio</span>
+        <span>B</span>
+        <span>Armandas</span>
       </a>
       <div>
         <p>
-          Este site foi feito com <img src={reactIcon} alt="React" /> e muito
-          <span>❤️</span>
+          This site was made with <img src={reactIcon} alt="React" />
+          <span>and very much ❤️</span>
         </p>
       </div>
 
       <div className="social-media">
         <a
-          href="https://www.linkedin.com/in/jtsoares/"
+          href="https://www.linkedin.com/in/armandas-barkauskas/"
           target="_blank"
           rel="noreferrer"
         >
@@ -30,7 +30,7 @@ export function Footer() {
         </a>
 
         <a
-          href="https://github.com/joaotuliojt"
+          href="https://github.com/armandasalmd"
           target="_blank"
           rel="noreferrer"
         >
@@ -38,7 +38,7 @@ export function Footer() {
         </a>
 
         <a
-          href="https://www.instagram.com/tulio_joaob/"
+          href="https://www.instagram.com/armandasbarkauskas/"
           target="_blank"
           rel="noreferrer"
         >
@@ -46,7 +46,7 @@ export function Footer() {
         </a>
 
         <a
-          href="https://discord.com/users/426120432991862784"
+          href="https://discord.com/users/armandasalmd#9847"
           target="_blank"
           rel="noreferrer"
         >

@@ -13,7 +13,7 @@ export const Container = styled.section`
       font-size: 1.8rem;
     }
     h1{
-      font-size: 7rem;
+      font-size: 5.5rem;
     }
 
     h3{
