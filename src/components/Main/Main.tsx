@@ -16,8 +16,11 @@ import sassIcon from "../../assets/sass-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
 import vscodeIcon from "../../assets/vscode-icon.svg";
 
+interface MainProps {
+  isDark: boolean;
+}
 
-export function Main(){
+export function Main(props: MainProps){
   return(
 
     <Container>
@@ -245,7 +248,7 @@ export function Main(){
       <Hero></Hero>
       <About></About>
       <Portfolio></Portfolio>
-      <Contact></Contact>
+      <Contact isDark={props.isDark}></Contact>
     </Container>
   );
 }

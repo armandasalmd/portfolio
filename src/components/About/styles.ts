@@ -4,7 +4,8 @@ export const Container = styled.section`
   margin-top: 12rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 4rem;
+  align-items: center;
 
   .hard-skills{
     margin-top: 1.6rem;
@@ -46,9 +47,11 @@ export const Container = styled.section`
     text-align: center;
    img{
      margin-top: 2rem;
+     object-fit: contain;
      width: 100%;
      filter: grayscale(0.5);
      transition: filter 0.5s;
+     max-height: 50rem;
      &:hover{
        filter: grayscale(0);
      }

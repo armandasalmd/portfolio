@@ -5,7 +5,11 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import { useEffect, useState } from 'react'
 import validator from 'validator'
 
-export function Form() {
+interface FormProps {
+  isDark: boolean;
+}
+
+export function Form(props: FormProps) {
   const [state, handleSubmit] = useForm('xjvllwap')
 
   const [validEmail, setValidEmail] = useState(false)
@@ -47,6 +51,8 @@ export function Form() {
     )
   }
 
+  console.log(props);
+
   return (
     <Container>
       <h2>Contact me using the form below</h2>
@@ -76,12 +82,25 @@ export function Form() {
           field="message"
           errors={state.errors}
         />
-        <ReCAPTCHA
-          sitekey="6LcAu-IdAAAAAJOTI5E_eRltZNQCvukIl2-f1glQ"
+        {
+          props.isDark && 
+          <ReCAPTCHA
+          theme='dark'
+          sitekey="6LcjyCEgAAAAAFUOGoKK0ww80zGfjHpDOg9SMFKE"
           onChange={(e) => {
             setIsHuman(true)
           }}
         ></ReCAPTCHA>
+        }
+        {
+          !props.isDark && 
+          <ReCAPTCHA
+          sitekey="6LcjyCEgAAAAAFUOGoKK0ww80zGfjHpDOg9SMFKE"
+          onChange={(e) => {
+            setIsHuman(true)
+          }}
+        ></ReCAPTCHA>
+        }
         <button
           type="submit"
           disabled={state.submitting || !validEmail || !message || !isHuman}

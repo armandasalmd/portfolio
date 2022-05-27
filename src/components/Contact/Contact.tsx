@@ -3,8 +3,11 @@ import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg"
 import { Form } from "../Form/Form";
 
+interface ContactProps {
+  isDark: boolean;
+}
 
-export function Contact(){
+export function Contact(props: ContactProps){
 
   return(
     <Container id="contact">
@@ -22,7 +25,7 @@ export function Contact(){
           <div className="contacts__text" >+44 7914 603 504</div>
         </a>  
       </div>
-      <Form></Form>
+      <Form isDark={props.isDark} />
     </Container>
   )
 }

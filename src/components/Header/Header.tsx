@@ -4,12 +4,18 @@ import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 
 import Curriculo from '../../assets/cv-new-armandas.pdf'
-export function Header() {
+
+interface HeaderProps {
+  toggleTheme(): void;
+}
+
+export function Header(props: HeaderProps) {
   const [isActive, setActive] = useState(false)
 
   function toggleTheme() {
     let html = document.getElementsByTagName('html')[0]
     html.classList.toggle('light')
+    props.toggleTheme()
   }
 
   function closeMenu() {
