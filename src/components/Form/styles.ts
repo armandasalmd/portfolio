@@ -17,12 +17,12 @@ export const Container = styled.div`
     gap: 1rem;
     width: 100%;
     input, textarea{
+      background: var(--bg);
       width: 60rem;
       padding: 1rem 2rem;
       border-radius: 1.6rem;
       outline: none;
       border: none;
-      background:none;
       border: 1px solid #FFF;
       color: white;
       font-weight: 600;
@@ -49,6 +49,10 @@ export const Container = styled.div`
       width: 100%;
       
       input,textarea{
+        width: 100%;
+      }
+
+      .contacts__button {
         width: 100%;
       }
     }

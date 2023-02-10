@@ -5,10 +5,26 @@ export interface PortfolioItem {
     githubSource?: string;
     link?: string;
     images: string[];
+    year: number;
 }
 
 // Carousel docs: https://brainhubeu.github.io/react-carousel/docs/gettingStarted
 const items: PortfolioItem[] = [
+    {
+      abstract: `<div>
+      <p>Financial management app. Most of the time adult's money is split between multiple bank or investment accounts.</p>
+      <p>This app gives user an ability to join all of its wealth into one place. With meaningful insights user can have a better understanding about his current/future financial situation. As a result, user can make better financial choices impacting its future positively.
+      <p>User Experience was a priority - every app component was designed to a perfect detail with love in Figma.</p>`,
+      images: [
+          "https://i.gyazo.com/de15b09c57e046282285aad8bab27a12.gif",
+          "https://user-images.githubusercontent.com/17089888/218181221-8adfe401-cd38-4f2e-904c-e31d4878049c.png",
+      ],
+      tags: ["NextTS", "Storybook", "Serverless", "Firebase", "ChartJs", "MongoDB", "Recoil", "SCSS"],
+      title: "🥇 Money Can Fly",
+      githubSource: "https://github.com/armandasalmd/money-can-fly",
+      link: "https://money-can-fly.vercel.app/",
+      year: 2023
+    },
     {
         abstract: `<div>
         <p>Inspired by my best friend, I decided to create a card game as a responsive app (PWA). The website has modern UI interface and rich game menu. The game itself allows players to express themselves with emojis. More than one background theme is supported.</p>
@@ -24,9 +40,10 @@ const items: PortfolioItem[] = [
             "/portfolio/luggage7.png"
         ],
         tags: ["MongoDB", "NodeTS", "ReactTS", "Redux", "SCSS", "Redis", "WebSockets", "OAuth2", "DDD"],
-        title: "🥇 Luggage game",
+        title: "🥈 Luggage game",
         githubSource: "https://github.com/armandasalmd/luggage-game",
-        link: "https://luggage-game.vercel.app/auth/login"
+        link: "https://luggage-game.vercel.app/auth/login",
+        year: 2022
     },
     {
         abstract: `<p>This is a research in Deep Learning field aiming to discover an <a href="https://drive.google.com/file/d/18TyTUxSZTwFn0nkomoOZimhaAVvhKh4f/view" target="_blank">alternative Covid-19 screening method</a>. It shows that we can detect Covid-19 using Chest X-Ray medical images and Artificial Intelligence.</p>
@@ -37,10 +54,22 @@ const items: PortfolioItem[] = [
             "/portfolio/cov_methodology.png",
         ],
         tags: ["Jupyter", "Python", "Keras", "TensorFlow", "CNN"],
-        title: "🥈 Deep Covid - AI - Dissertation",
+        title: "🥉 Deep Covid - AI - Dissertation",
         githubSource: "https://github.com/armandasalmd/deep-covid",
-        link: "https://drive.google.com/file/d/18TyTUxSZTwFn0nkomoOZimhaAVvhKh4f/view"
+        link: "https://drive.google.com/file/d/18TyTUxSZTwFn0nkomoOZimhaAVvhKh4f/view",
+        year: 2022
     },
+    {
+      abstract: `<p>After Notex MVP, I decided to extend aforementioned web app into a cross platform mobile app using Xamarin Forms. It allows users only to read articles but not create them. This project uses same API services as used in the Notex web app.</p>`,
+      images: [
+          "/portfolio/notex-mobile.png",
+          "/portfolio/notex-login.png",
+          "/portfolio/notex-useCaseDiagram.drawio.png",
+      ],
+      tags: ["Xamarin", ".NET Core", "Figma"],
+      title: "Notex mobile app",
+      year: 2022
+  },
     {
         abstract: `<p>A platform where people can create school notes and publish them as publicly available articles online. The idea was to replace paper notebooks and allow sharing your school notes with classmates easily.</p>
         <p>A full-stack project spanning across 3 separate repositories with more than a year spent developing it. The codebase employs caching for <a href="https://redis.io/docs/stack/search/" target="_blank">search engine</a>, integrates <a href="https://editorjs.io/" target="_blank">modern content editor</a>, and offers many other services.</p>`,
@@ -56,20 +85,21 @@ const items: PortfolioItem[] = [
             "/portfolio/notex9.png",
         ],
         tags: ["ReactJS", "NodeTS", "MongoDB", ".NET Core", "MySQL", "Redis", "Docker", "Nginx", "Redux", "OAuth2"],
-        title: "🥉 Notex web app",
+        title: "Notex web app ⭐",
         githubSource: "https://github.com/joaotuliojt/fc-squad43",
-        link: "http://notex-client.herokuapp.com"
+        link: "http://notex-client.herokuapp.com",
+        year: 2021
     },
     {
-        abstract: `<p>After Notex MVP, I decided to extend aforementioned web app into a cross platform mobile app using Xamarin Forms. It allows users only to read articles but not create them. This project uses same API services as used in the Notex web app.</p>`,
-        images: [
-            "/portfolio/notex-mobile.png",
-            "/portfolio/notex-login.png",
-            "/portfolio/notex-useCaseDiagram.drawio.png",
-        ],
-        tags: ["Xamarin", ".NET Core", "Figma"],
-        title: "Notex mobile app"
-    },
+      abstract: `<p>Figma UX project for sharing notes and articles. It has been successfully implemented as a <a href="https://luggage-game.vercel.app/auth/login" target="_blank">ReactJS project</a> later on.</p>`,
+      images: [
+          "/portfolio/notex-ux.png",
+      ],
+      tags: ["Figma", "UX", "UI"],
+      title: "Notex - UX",
+      link: "https://www.figma.com/file/qreJAqhSVtHwDsYJqEVbo9/Notex---main?node-id=121%3A213",
+      year: 2020
+  },
     {
         abstract: `<p>Coventry University has a <a href="https://github.com/armandasalmd/cov-classification-calculator/blob/production/src/utils/classificator.js" target="_blank">complex algorithm</a> to calculate graduation grade. Out of curiousity, I developed a NextJs web app.</p> 
         <p>This open-source project allows to add dynamic course templates so classificator can calculate final degree for any course.</p>`,
@@ -82,7 +112,8 @@ const items: PortfolioItem[] = [
         tags: ["NextJS", "ReactJS"],
         title: "Uni Degree Classificator",
         githubSource: "https://github.com/armandasalmd/cov-classification-calculator",
-        link: "https://cov-classification-calculator.vercel.app"
+        link: "https://cov-classification-calculator.vercel.app",
+        year: 2021
     },
     {
         abstract: `<p>My latest UX project, which was redesigned from ground 3 times. At all times mobile resposiveness was a priority. This UI project has been successfully implemented as a <a href="https://luggage-game.vercel.app/auth/login" target="_blank">ReactJS project</a>.</p>`,
@@ -91,16 +122,8 @@ const items: PortfolioItem[] = [
         ],
         tags: ["Figma", "UX", "UI"],
         title: "Luggage - UX",
-        link: "https://www.figma.com/file/EVixXQBooStz9WEsMysAAZ/Luggage-card-game?node-id=0%3A1"
-    },
-    {
-        abstract: `<p>Figma UX project for sharing notes and articles. It has been successfully implemented as a <a href="https://luggage-game.vercel.app/auth/login" target="_blank">ReactJS project</a> later on.</p>`,
-        images: [
-            "/portfolio/notex-ux.png",
-        ],
-        tags: ["Figma", "UX", "UI"],
-        title: "Notex - UX",
-        link: "https://www.figma.com/file/qreJAqhSVtHwDsYJqEVbo9/Notex---main?node-id=121%3A213"
+        link: "https://www.figma.com/file/EVixXQBooStz9WEsMysAAZ/Luggage-card-game?node-id=0%3A1",
+        year: 2021
     },
     {
         abstract: `<p>A car repair service platform. My first big UX project. As a co-founder I groomed this startup business idea with a CEO. It gave me strong UX/UI fundamentals and Figma skills. I learned how to develop new business.</p>`,
@@ -116,7 +139,8 @@ const items: PortfolioItem[] = [
         ],
         tags: ["Figma", "UX", "UI"],
         title: "Cartixit startup - UX",
-        link: "https://www.figma.com/proto/6qzbML635fn6gU0P2zuMAA/Cartixit-Original?scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=1975%3A0&show-proto-sidebar=1&node-id=1975%3A0"
+        link: "https://www.figma.com/proto/6qzbML635fn6gU0P2zuMAA/Cartixit-Original?scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=1975%3A0&show-proto-sidebar=1&node-id=1975%3A0",
+        year: 2019
     },
     {
         abstract: `<p>Android app that was mean to help planning my busy curriculum. This project developed solid development fundamentals for myself. As a 17 years old boy I challenged myself with big projects. App can be found on <a href="https://play.google.com/store/apps/details?id=com.armandasalmd.weeklyroutine&hl=en_GB&gl=US" target="_blank">Google Play</a>.</p>`,
@@ -130,7 +154,8 @@ const items: PortfolioItem[] = [
         tags: ["AndroidStudio", "Java"],
         title: "Weekly Routine",
         githubSource: "https://github.com/armandasalmd/weekly-routine",
-        link: "https://play.google.com/store/apps/details?id=com.armandasalmd.weeklyroutine&hl=en_GB&gl=US"
+        link: "https://play.google.com/store/apps/details?id=com.armandasalmd.weeklyroutine&hl=en_GB&gl=US",
+        year: 2018
     },
 
     {
@@ -140,7 +165,8 @@ const items: PortfolioItem[] = [
         ],
         tags: ["C++", "Sqlite3", "GamePhysics"],
         title: "Motherload game clone",
-        githubSource: "https://github.com/armandasalmd/motherload"
+        githubSource: "https://github.com/armandasalmd/motherload",
+        year: 2019
     },
 
     {
@@ -150,7 +176,8 @@ const items: PortfolioItem[] = [
         ],
         tags: ["Matlab", "ParallelProcessing"],
         title: "Big data project - Ozone layer",
-        githubSource: "https://github.com/armandasalmd/big-data"
+        githubSource: "https://github.com/armandasalmd/big-data",
+        year: 2020
     },
     {
         abstract: `<p>One of my first web apps created. Used Bootstrap, CSS, and Python. Worked with a customer who needed a platform to manage his little shop.</p>`,
@@ -159,7 +186,8 @@ const items: PortfolioItem[] = [
         ],
         tags: ["Python", "DJango", "Bootstrap", "CSS"],
         title: "Logan admin dashboard",
-        githubSource: "https://github.com/armandasalmd/logan-admin"
+        githubSource: "https://github.com/armandasalmd/logan-admin",
+        year: 2018
     },
     {
         abstract: `<p>A Coventry Hackaton project completed in 24 hours. During hackaton, I brainstromed a simple game idea. In the end, I was awarded with 5th place.</p>`,
@@ -168,7 +196,8 @@ const items: PortfolioItem[] = [
         ],
         tags: ["P5js", "CSS", "HTML"],
         title: "Number cruncher",
-        githubSource: "https://github.com/armandasalmd/number-cruncher"
+        githubSource: "https://github.com/armandasalmd/number-cruncher",
+        year: 2020
     },
     {
         abstract: `<p>Young boy's dream to solve Sudoku without any effort. During school days (16 years old), I used C# to solve easy-medium difficulty Sudokus</p>`,
@@ -177,7 +206,8 @@ const items: PortfolioItem[] = [
         ],
         tags: [".NET", "Console"],
         title: "Sudoku solver",
-        githubSource: "https://github.com/armandasalmd/sudoku-solver"
+        githubSource: "https://github.com/armandasalmd/sudoku-solver",
+        year: 2017
     },
     {
         abstract: `<p>Windows app that was used to create dynamic content for other failed mobile app that's not listed here. XML file structure was represented as visual components with different properties.</p>`,
@@ -186,7 +216,8 @@ const items: PortfolioItem[] = [
         ],
         tags: [".NET", "WPF"],
         title: "XML content studio",
-        githubSource: "https://github.com/armandasalmd/xml-content-maker"
+        githubSource: "https://github.com/armandasalmd/xml-content-maker",
+        year: 2017
     },
 ];
 

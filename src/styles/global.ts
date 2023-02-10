@@ -5,14 +5,23 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
   :root{
-    --pink: #dcecf1;
     --black: #212121;
+
     --white: #fff;
     --green: #2ca4d8;
     --blue: #01b975;
     scroll-padding-top: 10rem;
 
+    --text: #efefef;
+    --tag: #dddddd;
+    --link: #ddddee;
+    --bg: #212121;
+
     &.light{
+      --text: #121212;
+      --tag: #555555;
+      --link: #333344;
+      --bg: #f5f5f5;
 
       body{
         transition: 0.5s;
@@ -22,6 +31,10 @@ export const GlobalStyle = createGlobalStyle`
 
       .logo{
         color: var(--black);
+      }
+
+      .card {
+        background: rgba(233, 233, 233);
       }
 
       header.header-fixed{

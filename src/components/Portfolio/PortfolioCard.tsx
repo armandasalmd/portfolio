@@ -8,7 +8,7 @@ import externalLinkIcon from "../../assets/external-link-icon.svg";
 
 const StyledPortfolioCard = styled.div`
     padding-bottom: 2rem;
-    background: rgba(234, 234, 234, 0.9);
+    background: rgba(52, 52, 52);
     border-radius: 1.2rem;
     transition: 0.25s;
     display: flex;
@@ -18,11 +18,11 @@ const StyledPortfolioCard = styled.div`
 
     &:hover{
         transform: translateY(-5px);
-        background-color: var(--pink);
     }
 
     p {
         margin-bottom: 1.5rem;
+        color: var(--text);
     }
 `
 
@@ -46,11 +46,13 @@ const StyledTitleContainer = styled.div`
     margin-bottom: 1.2rem;
     display: flex;
     justify-content: space-between;
+    color: var(--green);
 
     .actions {
         display: flex;
         align-items: center;
         gap: 1rem;
+        color: red;
     }
 
     a > img {
@@ -64,6 +66,7 @@ const StyledCardFooter = styled.div`
 
     ul {
         display: flex;
+        color: var(--tag);
         align-items: center;
         gap: 1.3rem;
         font-size: 1.4rem;
@@ -77,7 +80,7 @@ const StyledAbstract = styled.p`
     margin-bottom: 2rem;
 
     a{
-        color: var(--black);
+        color: var(--link);
         border-bottom: 1px solid var(--green);
         transition: color 0.25s;
 
@@ -88,14 +91,14 @@ const StyledAbstract = styled.p`
 `;
 
 export const PortfolioCard: FC<PortfolioItemProps> = (props) => {
-    const tags = props.tags.map(o => <li>{o}</li>);
+    const tags = props.tags.map(o => <li key={o}>{o}</li>);
 
     function openInNewTab(url: string) {
         if (window) window.open(url, '_blank');
     }
 
-    return <ScrollAnimation animateIn="flipInX" style={{marginTop: "2rem"}}>
-        <StyledPortfolioCard>
+    return <ScrollAnimation animateIn="slideInUp" duration={0.65} style={{marginTop: "2rem"}}>
+        <StyledPortfolioCard className="card">
             <StyledCardHeader>
                 <img alt="sample" src={props.images[0]} onClick={() => {
                     if (props.link) {
@@ -105,7 +108,7 @@ export const PortfolioCard: FC<PortfolioItemProps> = (props) => {
             </StyledCardHeader>
             <StyledCardBody>
                 <StyledTitleContainer>
-                    <h3>{props.title}</h3>
+                    <h3>{props.title} ({props.year})</h3>
                     <div className="actions">
                         {
                             props.githubSource &&

@@ -17,7 +17,7 @@ export function Hero(){
           <h3>Full Stack Developer</h3>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
-          <p className="small-resume">I am software engineer focusing on a modern Web development with JavaScript || .NET Core</p>
+          <p className="small-resume">I am software engineer focusing on a modern Web development with {'('}TypeScript && .NET Core{')'}</p>
         </ScrollAnimation>
 
           <ScrollAnimation animateIn="fadeInUp" delay={0.8*1000}>

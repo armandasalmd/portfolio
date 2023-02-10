@@ -121,8 +121,8 @@ export function Main(props: MainProps){
               "enable": true,
               "area": 800
             },
-            "limit": 20,
-            "value": 15,
+            "limit": 10,
+            "value": 10,
           },
           "opacity": {
             "animation": {

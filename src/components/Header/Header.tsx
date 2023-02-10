@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 export function Header(props: HeaderProps) {
-  const [isActive, setActive] = useState(false)
+  const [isActive, setActive] = useState(true)
 
   function toggleTheme() {
     let html = document.getElementsByTagName('html')[0]

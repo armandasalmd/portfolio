@@ -3,7 +3,7 @@ import { PortfolioCard } from "./PortfolioCard";
 import portfolioDataItems from "./portfolioData";
 
 export function Portfolio(){
-  const items = portfolioDataItems.map(o => <PortfolioCard {...o} />);
+  const items = portfolioDataItems.map(o => <PortfolioCard key={o.title} {...o} />);
 
   return(
     <Container id="portfolio">

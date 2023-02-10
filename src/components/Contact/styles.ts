@@ -58,6 +58,10 @@ export const Container = styled.section`
         width: 100%;
         flex-direction: column;
       }
+
+      &__button{
+        width: 100%;
+      }
     }
   }
   

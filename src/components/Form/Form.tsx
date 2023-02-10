@@ -51,8 +51,6 @@ export function Form(props: FormProps) {
     )
   }
 
-  console.log(props);
-
   return (
     <Container>
       <h2>Contact me using the form below</h2>

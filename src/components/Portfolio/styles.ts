@@ -17,7 +17,7 @@ export const Container = styled.section`
     margin-bottom: 7rem;
     font-size: 2rem;
     text-align: center;
-    color: #404040;
+    color: #999999;
   }
   
   h2{
