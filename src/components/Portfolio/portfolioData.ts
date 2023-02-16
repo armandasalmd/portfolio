@@ -19,7 +19,7 @@ const items: PortfolioItem[] = [
           "https://i.gyazo.com/de15b09c57e046282285aad8bab27a12.gif",
           "https://user-images.githubusercontent.com/17089888/218181221-8adfe401-cd38-4f2e-904c-e31d4878049c.png",
       ],
-      tags: ["NextTS", "Storybook", "Serverless", "Firebase", "ChartJs", "MongoDB", "Recoil", "SCSS"],
+      tags: ["NextTS", "Parallel processing", "Serverless", "Storybook", "Firebase", "ChartJs", "MongoDB", "Recoil", "SCSS"],
       title: "🥇 Money Can Fly",
       githubSource: "https://github.com/armandasalmd/money-can-fly",
       link: "https://money-can-fly.vercel.app/",
