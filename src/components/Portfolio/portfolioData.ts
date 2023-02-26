@@ -86,7 +86,7 @@ const items: PortfolioItem[] = [
         ],
         tags: ["ReactJS", "NodeTS", "MongoDB", ".NET Core", "MySQL", "Redis", "Docker", "Nginx", "Redux", "OAuth2"],
         title: "Notex web app ⭐",
-        githubSource: "https://github.com/joaotuliojt/fc-squad43",
+        githubSource: "https://github.com/armandasalmd/notex-nexus-api",
         link: "http://notex-client.herokuapp.com",
         year: 2021
     },
@@ -99,7 +99,7 @@ const items: PortfolioItem[] = [
       title: "Notex - UX",
       link: "https://www.figma.com/file/qreJAqhSVtHwDsYJqEVbo9/Notex---main?node-id=121%3A213",
       year: 2020
-  },
+    },
     {
         abstract: `<p>Coventry University has a <a href="https://github.com/armandasalmd/cov-classification-calculator/blob/production/src/utils/classificator.js" target="_blank">complex algorithm</a> to calculate graduation grade. Out of curiousity, I developed a NextJs web app.</p> 
         <p>This open-source project allows to add dynamic course templates so classificator can calculate final degree for any course.</p>`,
