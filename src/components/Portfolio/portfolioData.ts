@@ -16,7 +16,7 @@ const items: PortfolioItem[] = [
       <p>This app gives user an ability to join all of its wealth into one place. With meaningful insights user can have a better understanding about his current/future financial situation. As a result, user can make better financial choices impacting its future positively.
       <p>User Experience was a priority - every app component was designed to a perfect detail with love in Figma.</p>`,
       images: [
-          "https://i.gyazo.com/de15b09c57e046282285aad8bab27a12.gif",
+          "https://i.gyazo.com/e0b97b85fdd64504ebb36668427753a9.gif",
           "https://user-images.githubusercontent.com/17089888/218181221-8adfe401-cd38-4f2e-904c-e31d4878049c.png",
       ],
       tags: ["NextTS", "Parallel processing", "Serverless", "Storybook", "Firebase", "ChartJs", "MongoDB", "Recoil", "SCSS"],

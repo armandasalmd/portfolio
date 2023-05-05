@@ -69,9 +69,14 @@ const StyledCardFooter = styled.div`
         color: var(--tag);
         align-items: center;
         gap: 1.3rem;
-        font-size: 1.4rem;
-        opacity: 0.6;
+        font-size: 1.5rem;
         flex-wrap: wrap;
+        background: #292929;
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-bottom: -14px;
+        padding: 12px;
+        border-radius: 8px;
     }
 `
 
@@ -106,9 +111,11 @@ export const PortfolioCard: FC<PortfolioItemProps> = (props) => {
                     }
                 }} />
             </StyledCardHeader>
+            
             <StyledCardBody>
                 <StyledTitleContainer>
                     <h3>{props.title} ({props.year})</h3>
+                    
                     <div className="actions">
                         {
                             props.githubSource &&
@@ -124,15 +131,16 @@ export const PortfolioCard: FC<PortfolioItemProps> = (props) => {
                         }
                     </div>
                 </StyledTitleContainer>
+                
                 <StyledAbstract dangerouslySetInnerHTML={{
                     __html: props.abstract
                 }} />
             </StyledCardBody>
             <StyledCardFooter>
-                <ul>
-                    {tags}
-                </ul>
-            </StyledCardFooter>
+                  <ul>
+                      {tags}
+                  </ul>
+              </StyledCardFooter>
         </StyledPortfolioCard>
     </ScrollAnimation>;
 }

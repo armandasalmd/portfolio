@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-padding-top: 10rem;
 
     --text: #efefef;
-    --tag: #dddddd;
+    --tag: #84cfeb;
     --link: #ddddee;
     --bg: #212121;
 
@@ -35,6 +35,14 @@ export const GlobalStyle = createGlobalStyle`
 
       .card {
         background: rgba(233, 233, 233);
+      }
+
+      ul {
+        background: unset;
+
+        li {
+          color: #1562ba;
+        }
       }
 
       header.header-fixed{
