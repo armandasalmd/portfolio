@@ -1,10 +1,11 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import { PortfolioItem as PortfolioItemProps } from "./portfolioData";
 import githubIcon from "../../assets/github-icon.svg";
 import externalLinkIcon from "../../assets/external-link-icon.svg";
+import { ImageViewer } from "../ImageViewer/ImageViewer";
 
 const StyledPortfolioCard = styled.div`
     padding-bottom: 2rem;
@@ -23,18 +24,6 @@ const StyledPortfolioCard = styled.div`
     p {
         margin-bottom: 1.5rem;
         color: var(--text);
-    }
-`
-
-const StyledCardHeader = styled.div`
-    img {
-        width: 100%;
-        margin-bottom: 1.8rem;
-        height: 220px;
-        object-fit: cover;
-        border-top-left-radius: 1.2rem;
-        border-top-right-radius: 1.2rem;
-        cursor: pointer;
     }
 `
 
@@ -96,21 +85,13 @@ const StyledAbstract = styled.p`
 `;
 
 export const PortfolioCard: FC<PortfolioItemProps> = (props) => {
+    const [hovered, setHovered] = useState(false);
+  
     const tags = props.tags.map(o => <li key={o}>{o}</li>);
 
-    function openInNewTab(url: string) {
-        if (window) window.open(url, '_blank');
-    }
-
     return <ScrollAnimation animateIn="slideInUp" duration={0.65} style={{marginTop: "2rem"}}>
-        <StyledPortfolioCard className="card">
-            <StyledCardHeader>
-                <img alt="sample" src={props.images[0]} onClick={() => {
-                    if (props.link) {
-                        openInNewTab(props.link);
-                    }
-                }} />
-            </StyledCardHeader>
+        <StyledPortfolioCard className="card" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+            <ImageViewer images={props.images} isHovered={hovered} />
             
             <StyledCardBody>
                 <StyledTitleContainer>

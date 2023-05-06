@@ -36,5 +36,8 @@ export const Container = styled.section`
     .projects{
       grid-template-columns: 1fr;
     }
+
+    margin-left: -32px;
+    margin-right: -32px;
   }
 `;
