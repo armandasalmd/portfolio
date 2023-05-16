@@ -3,8 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 
-import Curriculo from '../../assets/cv-new-armandas.pdf'
-
 interface HeaderProps {
   toggleTheme(): void;
 }
@@ -52,9 +50,6 @@ export function Header(props: HeaderProps) {
           <NavHashLink smooth to="#contact" onClick={closeMenu}>
             Contact
           </NavHashLink>
-          <a href={Curriculo} download className="button">
-            Download CV
-          </a>
         </nav>
 
         <div
