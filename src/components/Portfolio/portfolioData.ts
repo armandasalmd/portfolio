@@ -23,9 +23,9 @@ function createImage(link: string, caption?: string): ImageItem {
 const items: PortfolioItem[] = [
     {
       abstract: `<div>
-      <p>Financial management app. Most of the time adult's money is split between multiple bank or investment accounts.</p>
-      <p>This app gives user an ability to join all of its wealth into one place. With meaningful insights user can have a better understanding about his current/future financial situation. As a result, user can make better financial choices impacting its future positively.
-      <p>User Experience was a priority - every app component was designed to a perfect detail with love in Figma.</p>`,
+      <p>Full-stack finance platform that consolidates bank accounts, investments, and multi-currency balances into a single dashboard. Built solo, end-to-end: database schema, REST API, auth, business logic, and UI component library.</p>
+      <p><a href="https://gocardless.com/open-banking" target="_blank">GoCardless Open Banking integration</a> lets users pull real transactions directly from their bank. The import pipeline handles normalisation, two-layer deduplication, auto-categorisation, and historical currency conversion — no CSV exports needed.</p>
+      <p>Every app component was designed to a perfect detail with love in Figma.</p></div>`,
       images: [
         createImage("https://i.gyazo.com/e0b97b85fdd64504ebb36668427753a9.gif", "Landing page"),
         createImage("/portfolio/imgs/mcf6.png", "Manage transactions"),
@@ -44,10 +44,13 @@ const items: PortfolioItem[] = [
     },
     {
         abstract: `<div>
-        <p>Inspired by my best friend, I decided to create a card game as a responsive app (PWA). The website has modern UI interface and rich game menu. The game itself allows players to express themselves with emojis. More than one background theme is supported.</p>
-        <p>MERN stack app. Used a handful of <a href="https://github.com/armandasalmd/luggage-game/blob/production/package.json" target="_blank">modern technologies</a>, where most of them belongs to TypeScript language family. Invested lots of time to build efficient and scalable backend service, leveraging some of the <a href="https://khalilstemmler.com/articles/tags/ddd/" target="_blank">Domain-Driven-Dev principles</a>.</p></div>`,
+        <p>Built a real-time card game <a href="https://web.dev/explore/progressive-web-apps" target="_blank">PWA</a> using React and a decoupled Node.js (Express) backend, designed with <a href="https://khalilstemmler.com/articles/tags/ddd/" target="_blank">Domain-Driven Design principles</a>.</p>
+        <p>Implemented a hybrid REST + WebSocket (Socket.IO) architecture for low-latency gameplay, using MongoDB for persistence and Redis for high-performance caching.</p>
+        <p>On the frontend, tackled complex state management and animation challenges to deliver smooth, interactive gameplay. Iterated on the product design multiple times, refining both user experience and system architecture.</p>
+        </div>`,
         images: [
           createImage("https://i.gyazo.com/55d5692f8dfc31f00368a1e2d45c8036.gif", "Game in action"),
+          createImage("/portfolio/imgs/luggage-api-arch.png", "Layered API architecture"),
           createImage("/portfolio/imgs/luggage1.png", "Game (Blue theme)"),
           createImage("/portfolio/imgs/luggage2.png", "Game (Green theme)"),
           createImage("/portfolio/imgs/luggage3.jpg", "Progresive Web App (PWA)"),
